@@ -1,0 +1,22 @@
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -10px;
+  padding-top: 15px;
+}
+
+.filterLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filterName {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: auto; 
+  width: 60%; 
+}
