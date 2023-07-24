@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { logOut } from 'redux/auth/operations';
 
-import './UserMenu.css'; // Zaktualizuj ścieżkę importu do nowej nazwy pliku CSS
+import './UserMenu.css'; 
 
 export const UserMenu = () => {
   const { user } = useAuth();
