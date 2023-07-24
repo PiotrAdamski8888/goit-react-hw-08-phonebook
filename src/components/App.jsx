@@ -7,7 +7,8 @@ import { refreshUser } from 'redux/auth/operations';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 
-import styles from './App.module.css';
+import 'bulma/css/bulma.min.css';
+import './App.css';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage'));
@@ -25,7 +26,9 @@ export const App = () => {
   return isRefreshing ? (
     <b>searching</b>
   ) : (
-    <div className={styles.container}>
+    <div className="container">
+      {' '}
+     
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

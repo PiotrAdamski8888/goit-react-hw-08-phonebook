@@ -8,11 +8,14 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <NavLink className={css.link} to="/">
+      <NavLink className={`button is-link is-uppercase ${css.link}`} to="/">
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink className={css.link} to="/tasks">
+        <NavLink
+          className={`button is-link is-uppercase ${css.link}`}
+          to="/contacts"
+        >
           Contacts
         </NavLink>
       )}

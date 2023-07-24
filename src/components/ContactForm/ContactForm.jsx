@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid';
 import { fetchContacts, addContact } from 'redux/contacts/operations';
 import { Filter } from 'components/Filter/Filter';
 
+import 'bulma/css/bulma.min.css'; 
 import css from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -44,27 +45,33 @@ const ContactForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmitForm} className={css.contactForm}>
-        <div className={css.formField}>
-          <label className={css.formLabel}>Name:</label>
-          <input
-            className={css.formInput}
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-          />
+        <div className="field">
+          <label className="label">Name:</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+          </div>
         </div>
-        <div className={css.formField}>
-          <label className={css.formLabel}>Number:</label>
-          <input
-            className={css.formInput}
-            type="text"
-            name="number"
-            value={formData.number}
-            onChange={handleInputChange}
-          />
+        <div className="field">
+          <label className="label">Number:</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              name="number"
+              value={formData.number}
+              onChange={handleInputChange}
+            />
+          </div>
         </div>
-        <button type="submit">Add Contact</button>
+        <button type="submit" className="button is-primary">
+          Add Contact
+        </button>
         <Filter />
       </form>
     </div>
